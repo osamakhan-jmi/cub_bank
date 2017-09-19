@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4cc26d9-6a15-44cf-a656-d428f151b139" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cubbank/cubcontoller/CustomerController.class" afterPath="$PROJECT_DIR$/target/classes/com/cubbank/cubcontoller/CustomerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cubbank/cubentity/Account.class" afterPath="$PROJECT_DIR$/target/classes/com/cubbank/cubentity/Account.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cubbank/cubentity/Customer.class" afterPath="$PROJECT_DIR$/target/classes/com/cubbank/cubentity/Customer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cubbank/service/CustomerService.class" afterPath="$PROJECT_DIR$/target/classes/com/cubbank/service/CustomerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cubbank/service/ICustomerService.class" afterPath="$PROJECT_DIR$/target/classes/com/cubbank/service/ICustomerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/CustomerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Customer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Transaction.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Transaction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/repository/IAccountRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/repository/IAccountRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/service/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/service/AccountService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/service/CustomerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/service/CustomerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/service/ICustomerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/service/ICustomerService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,8 +39,8 @@
       <file leaf-file-name="TransactionController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/TransactionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+            <state relative-caret-position="391">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -732,7 +715,7 @@
       <workItem from="1505730384187" duration="4099000" />
       <workItem from="1505738167656" duration="1970000" />
       <workItem from="1505752459593" duration="1384000" />
-      <workItem from="1505797002044" duration="28908000" />
+      <workItem from="1505797002044" duration="28963000" />
     </task>
     <task id="LOCAL-00001" summary="OK 2nd Commit">
       <created>1505797296855</created>
@@ -797,11 +780,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505817108454</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="OK &quot;final&quot; Commit">
+      <created>1505830787378</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1505830787378</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59706000" />
+    <option name="totallyTimeSpent" value="59761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1252,8 +1242,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/TransactionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        <state relative-caret-position="391">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
