@@ -5,7 +5,7 @@ import com.cubbank.repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("userLoginService")
 public class UserService implements IUserService{
 
     private IUserRepository userRepository;
