@@ -4,19 +4,17 @@ import com.sun.deploy.net.HttpRequest;
 import org.omg.CORBA.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 
 import com.cubbank.cubentity.User;
 import com.cubbank.service.UserService;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.util.Map;
 
 @Controller
+@RequestMapping(path = "/cubbank")
 public class UserController {
 
     private UserService userService;
@@ -27,24 +25,18 @@ public class UserController {
     }
 
     @RequestMapping(path="/login", method = RequestMethod.POST)
-    public ModelAndView validateUserLogin(ModelAndView modelAndView, @Valid User user, BindingResult bindingResult,
-                                          @RequestParam Map requestParams, RedirectAttributes rdrAttr){
+    public @ResponseBody User validateUserLogin(@RequestParam("userid") String userid, @RequestParam("password") String pswd){
 
-        modelAndView.setViewName("");
-        if(userService.getUserById(user.getUserId())!=null) {
-            User usr = userService.getUserById(user.getUserId());
-            if(user.getUserPassword().equals(usr.getUserPassword())){
-                if(user.getLoginAttempts()<3){
-                    modelAndView.setViewName("");
-                }else{
-                        rdrAttr.addFlashAttribute("errorMessage","You are blocked");
-                }
+        User user = null;
+        if(userService.getUserById(userid)!=null){
+
+            user = userService.getUserById(userid);
+            if(user.getUserPassword().equals(pswd)){
+                return userService.getUserById(userid);
             }else{
-                rdrAttr.addFlashAttribute("errorMessage","Password is wrong");
+                user.incrementLoginAttempts();
             }
-        }else{
-            rdrAttr.addFlashAttribute("errorMessage","Wrong User Id");
         }
-        return modelAndView;
+        return user;
     }
 }

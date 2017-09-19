@@ -29,4 +29,10 @@ public class CustomerService implements ICustomerService {
     public Customer getCustomerById(String custID) {
         return customerRepository.findOne(custID);
     }
+
+    @Override
+    public boolean registerCustomer(Customer csr) {
+        customerRepository.save(csr);
+        return true;
+    }
 }

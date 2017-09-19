@@ -16,7 +16,7 @@ public class Customer {
     @Column(name="cub_cust_ID")
     private String customerId;
     @Column(name="cub_cust_mobno")
-    int customerMobNo;
+    Long customerMobNo;
     @Column(name="cub_cust_fname")
     private String customerFname;
     @Column(name="cub_cust_mname")
@@ -50,11 +50,11 @@ public class Customer {
         this.customerId = customerId;
     }
 
-    public int getCustomerMobNo() {
+    public Long getCustomerMobNo() {
         return customerMobNo;
     }
 
-    public void setCustomerMobNo(int customerMobNo) {
+    public void setCustomerMobNo(Long customerMobNo) {
         this.customerMobNo = customerMobNo;
     }
 

@@ -10,13 +10,13 @@ import java.util.Date;
 public class Account {
 
     @Id
-    @Column(name="cub_bank_account_no")
+    @Column(name="cub_account_no")
     private long accountNo;
-    @Column(name="cub_bank_account_balance")
+    @Column(name="cub_account_balance")
     private double accountBalance;
-    @Column(name="cub_bank_account_type")
+    @Column(name="cub_account_type")
     private String accountType;
-    @Column(name="cub_bank_account_open_date")
+    @Column(name="cub_account_open_date")
     private Date accountActivationDate;
     @Column(name="cub_cust_ID")
     private String customerId;
