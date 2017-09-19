@@ -15,6 +15,7 @@ import com.cubbank.service.CustomerService;
 public class CustomerController {
 
 
+    @Autowired
     private CustomerService customerService;
 
     @Autowired
