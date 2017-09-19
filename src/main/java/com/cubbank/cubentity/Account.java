@@ -1,15 +1,13 @@
 package com.cubbank.cubentity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by osama on 12-09-2017.
  */
 @Entity
-public class Account extends Customer {
+public class Account {
 
     @Id
     @Column(name="cub_bank_account_no")
@@ -20,6 +18,10 @@ public class Account extends Customer {
     private String accountType;
     @Column(name="cub_bank_account_open_date")
     private Date accountActivationDate;
+    @Column(name="cub_cust_ID")
+    private String customerId;
+
+    public String getCustomerId() { return customerId; }
 
     public long getAccountNo() {
         return accountNo;
