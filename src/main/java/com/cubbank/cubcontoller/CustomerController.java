@@ -11,11 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import com.cubbank.cubentity.Customer;
 import com.cubbank.service.CustomerService;
 
-@Controller
+@RestController
 public class CustomerController {
 
-
-    @Autowired
     private CustomerService customerService;
 
     @Autowired
