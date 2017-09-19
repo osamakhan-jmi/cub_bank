@@ -71,4 +71,10 @@ public class User {
     public void setAuthStatus(String authStatus) {
         this.authStatus = authStatus;
     }
+
+    public int incrementLoginAttempts(){
+        if(loginAttempts<3)
+            loginAttempts +=1;
+        return loginAttempts;
+    }
 }

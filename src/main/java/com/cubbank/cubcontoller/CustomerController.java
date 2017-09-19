@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import com.cubbank.cubentity.Customer;
 import com.cubbank.service.CustomerService;
 
-@RestController
+@Controller
 public class CustomerController {
 
     private CustomerService customerService;
@@ -21,12 +21,12 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @GetMapping(path="/customer/all")
+    @RequestMapping(path="/customer/all", method = RequestMethod.GET)
     public @ResponseBody Iterable<Customer> Contoller_getAllCustomer() {
         return customerService.getAllCustomer();
     }
 
-    @GetMapping(path="/customer/{id}")
+    @RequestMapping(path="/customer/{id}", method = RequestMethod.GET)
     public @ResponseBody Customer Contoller_getCustomerById(@PathVariable("id") String cstID){
         return  customerService.getCustomerById(cstID);
     }

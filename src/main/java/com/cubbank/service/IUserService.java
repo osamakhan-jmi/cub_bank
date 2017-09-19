@@ -1,4 +1,7 @@
 package com.cubbank.service;
 
-public class IUserService {
+import com.cubbank.cubentity.User;
+
+public interface IUserService {
+    User getUserById(String userId);
 }
