@@ -1,8 +1,6 @@
 package com.cubbank.cubentity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -26,6 +24,14 @@ public class Transaction {
     private long accountNo;
     @Column(name="cub_cust_ID")
     private String customerId;
+
+    public void setAccountNo(long accountNo) {
+        this.accountNo = accountNo;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
 
     public String getCustomerId() { return customerId; }
 

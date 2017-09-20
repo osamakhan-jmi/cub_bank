@@ -10,6 +10,7 @@ import java.util.Date;
 public class Account {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="cub_account_no")
     private long accountNo;
     @Column(name="cub_account_balance")

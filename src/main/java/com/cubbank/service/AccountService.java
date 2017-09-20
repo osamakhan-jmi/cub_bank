@@ -24,4 +24,15 @@ public class AccountService implements IAccountService {
     public Iterable<Account> getAllCustomerAccount(String cstID) {
         return accountRepository.getAccountsByCustomerId(cstID);
     }
+
+    @Override
+    public Account getAccount(Long acno) {
+        return accountRepository.findOne(acno);
+    }
+
+    @Override
+    public boolean updateAccount(Account a) {
+        accountRepository.save(a);
+        return true;
+    }
 }

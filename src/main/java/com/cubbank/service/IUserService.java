@@ -4,4 +4,5 @@ import com.cubbank.cubentity.User;
 
 public interface IUserService {
     User getUserById(String userId);
+    boolean forgetPassword(User u);
 }

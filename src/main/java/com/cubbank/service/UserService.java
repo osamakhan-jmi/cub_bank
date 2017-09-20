@@ -19,4 +19,11 @@ public class UserService implements IUserService{
     public User getUserById(String userId) {
         return userRepository.findOne(userId);
     }
+
+    @Override
+    public boolean forgetPassword(User u) {
+        userRepository.save(u);
+        return true;
+    }
+
 }

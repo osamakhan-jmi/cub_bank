@@ -32,11 +32,35 @@ public class UserController {
 
             user = userService.getUserById(userid);
             if(user.getUserPassword().equals(pswd)){
-                return userService.getUserById(userid);
+
+                user = userService.getUserById(userid);
+                user.setUserPassword(null);
+                return user;
             }else{
                 user.incrementLoginAttempts();
             }
         }
         return user;
+    }
+
+    @RequestMapping(value = "/user/forgetpassword", method = RequestMethod.POST)
+    public @ResponseBody String forgetPassword(@RequestParam("oldPswd") String oldPswd,
+                                               @RequestParam("newPswd") String newPswd,
+                                               @RequestParam("cnfrmPswd") String cnfrmPswd,
+                                               @RequestParam("userid") String userid){
+        String msg = null;
+        User u = userService.getUserById(userid);
+        if(u.getUserPassword().equals(oldPswd)){
+            if(newPswd.equals(cnfrmPswd)){
+                u.setUserPassword(newPswd);
+                userService.forgetPassword(u);
+                msg = "Password Chnged";
+            }else{
+                msg = "Password does not match";
+            }
+        }else{
+            msg = "Enter Correct Old Password";
+        }
+        return msg;
     }
 }

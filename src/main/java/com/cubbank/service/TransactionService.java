@@ -24,4 +24,10 @@ public class TransactionService implements ITransactionService {
     public Iterable<Transaction> getTransactionByAccountNo(Long accountNo) {
         return transactionRepository.getTransactionByAccountNo(accountNo);
     }
+
+    @Override
+    public boolean doTransaction(Transaction t) {
+        transactionRepository.save(t);
+        return true;
+    }
 }
