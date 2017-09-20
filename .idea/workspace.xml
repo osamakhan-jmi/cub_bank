@@ -8,19 +8,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cubbank/cubentity/Transaction.class" afterPath="$PROJECT_DIR$/target/classes/com/cubbank/cubentity/Transaction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cubbank/service/AccountService.class" afterPath="$PROJECT_DIR$/target/classes/com/cubbank/service/AccountService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cubbank/service/IAccountService.class" afterPath="$PROJECT_DIR$/target/classes/com/cubbank/service/IAccountService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c5a73745-e9e3-42d2-806b-f104c128cf16.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/c5a73745-e9e3-42d2-806b-f104c128cf16.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/TransactionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/TransactionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Transaction.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Transaction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/service/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/service/AccountService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/service/IAccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/service/IAccountService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/service/ITransactionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/service/ITransactionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/service/IUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/service/IUserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/service/TransactionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/service/TransactionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/service/UserService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -722,7 +710,7 @@
       <workItem from="1505752459593" duration="1384000" />
       <workItem from="1505797002044" duration="29035000" />
       <workItem from="1505881356098" duration="6061000" />
-      <workItem from="1505896681235" duration="13279000" />
+      <workItem from="1505896681235" duration="13336000" />
     </task>
     <task id="LOCAL-00001" summary="OK 2nd Commit">
       <created>1505797296855</created>
@@ -801,11 +789,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505830844688</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="OK &quot;20/9/2017 7:12 all serives done&quot; Commit">
+      <created>1505914998349</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1505914998349</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79173000" />
+    <option name="totallyTimeSpent" value="79230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -854,7 +849,8 @@
     <MESSAGE value="OK 2nd Commit" />
     <MESSAGE value="OK &quot;user&quot; Commit" />
     <MESSAGE value="OK &quot;final&quot; Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="OK &quot;final&quot; Commit" />
+    <MESSAGE value="OK &quot;20/9/2017 7:12 all serives done&quot; Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="OK &quot;20/9/2017 7:12 all serives done&quot; Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
