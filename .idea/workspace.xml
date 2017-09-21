@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e4cc26d9-6a15-44cf-a656-d428f151b139" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/CustomerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/TransactionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubcontoller/TransactionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Bank.java" afterPath="$PROJECT_DIR$/src/main/java/com/cubbank/cubentity/Bank.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -737,7 +733,7 @@
       <workItem from="1505752459593" duration="1384000" />
       <workItem from="1505797002044" duration="29035000" />
       <workItem from="1505881356098" duration="6061000" />
-      <workItem from="1505896681235" duration="31565000" />
+      <workItem from="1505896681235" duration="31671000" />
     </task>
     <task id="LOCAL-00001" summary="OK 2nd Commit">
       <created>1505797296855</created>
@@ -858,11 +854,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505977668998</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="OK &quot;21/9/2017 12:32 all serives done&quot; Commit">
+      <created>1506002567664</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1506002567664</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97459000" />
+    <option name="totallyTimeSpent" value="97565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
