@@ -9,7 +9,7 @@ import java.util.Date;
  * Created by osama on 12-09-2017.
  */
 @Entity
-public class User {
+public class CubUser {
     @Id
     @Column(name="cub_user_ID")
     private String userId;

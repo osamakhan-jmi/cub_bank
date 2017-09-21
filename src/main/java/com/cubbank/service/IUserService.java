@@ -1,8 +1,8 @@
 package com.cubbank.service;
 
-import com.cubbank.cubentity.User;
+import com.cubbank.cubentity.CubUser;
 
 public interface IUserService {
-    User getUserById(String userId);
-    boolean forgetPassword(User u);
+    CubUser getUserById(String userId);
+    boolean forgetPassword(CubUser u);
 }

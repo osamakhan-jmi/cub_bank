@@ -37,8 +37,6 @@ public class Customer {
     private String customerCountry;
     @Column(name="cub_cust_piostal_pin")
     private int customerPostalPin;
-    @Column(name="cub_cust_dob")
-    private Date customerDob;
     @Column(name="cub_cust_mpin")
     private int customermpin;
 
@@ -136,14 +134,6 @@ public class Customer {
 
     public void setCustomerPostalPin(int customerPostalPin) {
         this.customerPostalPin = customerPostalPin;
-    }
-
-    public Date getCustomerDob() {
-        return customerDob;
-    }
-
-    public void setCustomerDob(Date customerDob) {
-        this.customerDob = customerDob;
     }
 
     public void setCustomermpin(int customermpin){ this.customermpin = customermpin; }

@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.*;
 import com.cubbank.cubentity.Customer;
 import com.cubbank.service.CustomerService;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 @Controller
 @RequestMapping(path = "/cubbank")
@@ -47,7 +50,6 @@ public class CustomerController {
                                                   @RequestParam("state") String cstState,
                                                   @RequestParam("country") String cstCountry,
                                                   @RequestParam("pin") int cstpin,
-                                                  @RequestParam("dob") Date cstDob,
                                                   @RequestParam("mpin") int cstMpin){
 
         Customer cst = new Customer();
@@ -59,10 +61,10 @@ public class CustomerController {
         cst.setCustomerGender(cstgndr);
         cst.setCustomerEmail(cstEmail);
         cst.setCustomerStreet(cstStreet);
+        cst.setCustomerCity(cstCity);
         cst.setCustomerState(cstState);
         cst.setCustomerCountry(cstCountry);
         cst.setCustomerPostalPin(cstpin);
-        cst.setCustomerDob(cstDob);
         cst.setCustomermpin(cstMpin);
 
         customerService.registerCustomer(cst);

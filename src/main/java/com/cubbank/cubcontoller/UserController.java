@@ -1,17 +1,12 @@
 package com.cubbank.cubcontoller;
 
-import com.sun.deploy.net.HttpRequest;
-import org.omg.CORBA.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 
-import com.cubbank.cubentity.User;
+import com.cubbank.cubentity.CubUser;
 import com.cubbank.service.UserService;
-
-import javax.validation.Valid;
-import java.util.Map;
 
 @Controller
 @RequestMapping(path = "/cubbank")
@@ -21,35 +16,37 @@ public class UserController {
 
     @Autowired
     public UserController(UserService userService){
+
         this.userService = userService;
     }
 
     @RequestMapping(path="/login", method = RequestMethod.POST)
-    public @ResponseBody User validateUserLogin(@RequestParam("userid") String userid, @RequestParam("password") String pswd){
+    public @ResponseBody
+    CubUser validateUserLogin(@RequestParam("userid") String userid, @RequestParam("password") String pswd){
 
-        User user = null;
+        CubUser cubUser = null;
         if(userService.getUserById(userid)!=null){
 
-            user = userService.getUserById(userid);
-            if(user.getUserPassword().equals(pswd)){
+            cubUser = userService.getUserById(userid);
+            if(cubUser.getUserPassword().equals(pswd)){
 
-                user = userService.getUserById(userid);
-                user.setUserPassword(null);
-                return user;
+                cubUser = userService.getUserById(userid);
+                cubUser.setUserPassword(null);
+                return cubUser;
             }else{
-                user.incrementLoginAttempts();
+                cubUser.incrementLoginAttempts();
             }
         }
-        return user;
+        return cubUser;
     }
 
-    @RequestMapping(value = "/user/forgetpassword", method = RequestMethod.POST)
+    @RequestMapping(path = "/user/forgetpassword", method = RequestMethod.POST)
     public @ResponseBody String forgetPassword(@RequestParam("oldPswd") String oldPswd,
                                                @RequestParam("newPswd") String newPswd,
                                                @RequestParam("cnfrmPswd") String cnfrmPswd,
                                                @RequestParam("userid") String userid){
         String msg = null;
-        User u = userService.getUserById(userid);
+        CubUser u = userService.getUserById(userid);
         if(u.getUserPassword().equals(oldPswd)){
             if(newPswd.equals(cnfrmPswd)){
                 u.setUserPassword(newPswd);
