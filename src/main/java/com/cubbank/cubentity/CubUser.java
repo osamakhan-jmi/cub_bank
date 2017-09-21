@@ -3,12 +3,14 @@ package com.cubbank.cubentity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
  * Created by osama on 12-09-2017.
  */
 @Entity
+@Table(name = "cubuser")
 public class CubUser {
     @Id
     @Column(name="cub_user_ID")
