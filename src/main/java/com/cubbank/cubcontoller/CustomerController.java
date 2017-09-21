@@ -11,11 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import com.cubbank.cubentity.Customer;
 import com.cubbank.service.CustomerService;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 @Controller
 @RequestMapping(path = "/cubbank")
 public class CustomerController {
@@ -27,7 +22,7 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @RequestMapping(path="/customer/all", method = RequestMethod.GET)
+    @RequestMapping(path="/customer/all", method = RequestMethod.POST)
     public @ResponseBody Iterable<Customer> getAllCustomer() {
         return customerService.getAllCustomer();
     }
@@ -35,6 +30,29 @@ public class CustomerController {
     @RequestMapping(path="/customer/{id}", method = RequestMethod.GET)
     public @ResponseBody Customer getCustomerById(@PathVariable("id") String cstID){
         return  customerService.getCustomerById(cstID);
+    }
+
+    @RequestMapping(path = "/customer/changeaddress", method = RequestMethod.POST)
+    public @ResponseBody String updateCustomerAddress(@RequestParam("cstid") String cstid,
+                                                      @RequestParam("street") String street,
+                                                      @RequestParam("city") String city,
+                                                      @RequestParam("coutnry") String country,
+                                                      @RequestParam("pin") int pin){
+        Customer cst = customerService.getCustomerById(cstid);
+        if(street!=null){
+            cst.setCustomerStreet(street);
+        }
+        if(city!=null){
+            cst.setCustomerCity(city);
+        }
+        if(country!=null){
+            cst.setCustomerCountry(country);
+        }
+        if(pin!=0){
+            cst.setCustomermpin(pin);
+        }
+        customerService.registerCustomer(cst);
+        return "Address Updated";
     }
 
     @RequestMapping(path = "/customer/register", method = RequestMethod.POST)

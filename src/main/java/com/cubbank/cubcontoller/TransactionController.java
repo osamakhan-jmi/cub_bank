@@ -20,12 +20,12 @@ public class TransactionController {
         this.transactionService = transactionService;
     }
 
-    @RequestMapping(path = "/transaction/customerId", method = RequestMethod.GET)
+    @RequestMapping(path = "/transaction/customerId", method = RequestMethod.POST)
     public @ResponseBody Iterable<Transaction> getTransactionByCustomerId(@RequestParam("customerId") String cstId){
         return transactionService.getTransactionByCustomerId(cstId);
     }
 
-    @RequestMapping(path = "/transaction/accountNo", method = RequestMethod.GET)
+    @RequestMapping(path = "/transaction/accountNo", method = RequestMethod.POST)
     public @ResponseBody Iterable<Transaction> getTransactionByAccountNo(@RequestParam("customerAccountNo") Long acno){
         return transactionService.getTransactionByAccountNo(acno);
     }

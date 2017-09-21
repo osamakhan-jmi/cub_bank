@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.validation.Valid;
 import java.util.Date;
-import java.util.Map;
 import java.util.UUID;
 
 @Controller
@@ -30,14 +28,14 @@ public class AccountController {
     }
 
     // fetch all account by customer ID
-    @RequestMapping(path = "/customer/accounts", method = RequestMethod.GET)
+    @RequestMapping(path = "/customer/accounts", method = RequestMethod.POST)
     public @ResponseBody Iterable<Account> getCustomerAccount(@RequestParam("customerID") String cstid){
         return accountService.getAllCustomerAccount(cstid);
     }
 
     // customer debit ammount
     // takes parameter as account number, amount
-    @RequestMapping(path = "/customer/account/debit", method = RequestMethod.GET)
+    @RequestMapping(path = "/customer/account/debit", method = RequestMethod.POST)
     public @ResponseBody String debit(@RequestParam("accountNo") Long acno, @RequestParam("amount") double amount){
         String msg = null;
         Account a = accountService.getAccount(acno);
@@ -67,10 +65,9 @@ public class AccountController {
         return msg;
     }
 
-
     // customer credit ammount
     // takes parameter as account number, amount
-    @RequestMapping(path = "/customer/account/credit", method = RequestMethod.GET)
+    @RequestMapping(path = "/customer/account/credit", method = RequestMethod.POST)
     public @ResponseBody String credit(@RequestParam("accountNo") Long acno, @RequestParam("amount") double amount){
         String msg = null;
         Account a = accountService.getAccount(acno);
@@ -98,7 +95,7 @@ public class AccountController {
 
     //fund transfer by customer
     //takes parameter as fromaccount number, amount, toaccount
-    @RequestMapping(path = "", method = RequestMethod.GET)
+    @RequestMapping(path = "/customer/account/fundtransfer", method = RequestMethod.POST)
     public @ResponseBody String fundTransfer(@RequestParam("fromaccount") Long fromAccount,
                                              @RequestParam("amount") double amount,
                                              @RequestParam("toaccount") Long toAccount){
