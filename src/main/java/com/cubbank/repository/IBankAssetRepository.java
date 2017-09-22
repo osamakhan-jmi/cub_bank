@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Date;
 
-public interface IBankAssetRepository extends CrudRepository<BankAsset,Date> {
+public interface IBankAssetRepository extends CrudRepository<BankAsset, Date> {
 }

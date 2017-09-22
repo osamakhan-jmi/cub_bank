@@ -5,7 +5,7 @@ import com.cubbank.repository.IBankAssetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("bankAssetService")
 public class BankAssetService implements IBankAssetService {
 
     private IBankAssetRepository bankAssetRepository;

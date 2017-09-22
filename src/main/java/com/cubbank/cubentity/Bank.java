@@ -2,28 +2,21 @@ package com.cubbank.cubentity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
-/**
- * Created by osama on 12-09-2017.
- */
 @Entity
 public class Bank {
-    @Column(name = "cub_bank_ifcs")
-    private String bankIFSC;
-    @Column(name = "cub_bank_bank_name")
+    @Id
+    @Column(name = "cub_bank_ifsc")
+    private  String bankIfsc;
+    @Column(name = "cub_bank_name")
     private String bankName;
-    @Column(name = "cub_bank_asset")
-    private double bankAsset;
 
-    public String getBankIFSC() {
-        return bankIFSC;
+    public String getBankIfsc() {
+        return bankIfsc;
     }
 
     public String getBankName() {
         return bankName;
-    }
-
-    public double getBankAsset() {
-        return bankAsset;
     }
 }
