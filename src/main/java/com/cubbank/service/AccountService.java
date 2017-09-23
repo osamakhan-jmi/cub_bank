@@ -35,4 +35,9 @@ public class AccountService implements IAccountService {
         accountRepository.save(a);
         return true;
     }
+
+    @Override
+    public Account getAcountByAcountNo(Long acno) {
+        return accountRepository.findOne(acno);
+    }
 }

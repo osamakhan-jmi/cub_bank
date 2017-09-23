@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
 @RequestMapping(path = "/cubbank")
 public class TransactionController {
@@ -28,5 +30,10 @@ public class TransactionController {
     @RequestMapping(path = "/transaction/accountNo", method = RequestMethod.POST)
     public @ResponseBody Iterable<Transaction> getTransactionByAccountNo(@RequestParam("customerAccountNo") Long acno){
         return transactionService.getTransactionByAccountNo(acno);
+    }
+
+    @RequestMapping(path = "/transaction/account", method = RequestMethod.POST)
+    public @ResponseBody Iterable<Transaction> getNTransaction(@RequestParam("accountno") Long acno){
+            return transactionService.getN(acno);
     }
 }

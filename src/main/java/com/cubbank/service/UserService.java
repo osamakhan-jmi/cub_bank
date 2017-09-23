@@ -26,4 +26,8 @@ public class UserService implements IUserService{
         return true;
     }
 
+    public void save(CubUser user) {
+        userRepository.save(user);
+    }
+
 }

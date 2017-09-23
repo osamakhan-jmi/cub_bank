@@ -18,13 +18,11 @@ public class CubUser {
     @Column(name="cub_user_pswd")
     private String userPassword;
     @Column(name="cub_user_loginAttempts")
-    private int loginAttempts;
+    private Integer loginAttempts;
     @Column(name="cub_user_last_login")
-    private Date lastLogin;
+    private String lastLogin;
     @Column(name="cub_user_block_time")
-    private Date blockTime;
-    @Column(name="cub_user_auth_status")
-    private String authStatus;
+    private String blockTime;
 
     public String getUserId() {
         return userId;
@@ -42,39 +40,31 @@ public class CubUser {
         this.userPassword = userPassword;
     }
 
-    public int getLoginAttempts() {
+    public Integer getLoginAttempts() {
         return loginAttempts;
     }
 
-    public void setLoginAttempts(int loginAttempts) {
+    public void setLoginAttempts(Integer loginAttempts) {
         this.loginAttempts = loginAttempts;
     }
 
-    public Date getLastLogin() {
+    public String getLastLogin() {
         return lastLogin;
     }
 
-    public void setLastLogin(Date lastLogin) {
+    public void setLastLogin(String lastLogin) {
         this.lastLogin = lastLogin;
     }
 
-    public Date getBlockTime() {
+    public String getBlockTime() {
         return blockTime;
     }
 
-    public void setBlockTime(Date blockTime) {
+    public void setBlockTime(String blockTime) {
         this.blockTime = blockTime;
     }
 
-    public String getAuthStatus() {
-        return authStatus;
-    }
-
-    public void setAuthStatus(String authStatus) {
-        this.authStatus = authStatus;
-    }
-
-    public int incrementLoginAttempts(){
+    public Integer incrementLoginAttempts(){
         if(loginAttempts<3)
             loginAttempts +=1;
         return loginAttempts;

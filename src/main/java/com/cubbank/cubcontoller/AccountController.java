@@ -1,8 +1,10 @@
 package com.cubbank.cubcontoller;
 
 import com.cubbank.cubentity.Account;
+import com.cubbank.cubentity.Customer;
 import com.cubbank.cubentity.Transaction;
 import com.cubbank.service.AccountService;
+import com.cubbank.service.CustomerService;
 import com.cubbank.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +24,9 @@ public class AccountController {
     private TransactionService transactionService;
 
     @Autowired
-    public AccountController(AccountService accountService, TransactionService transactionService){
+    public AccountController(AccountService accountService,
+                             TransactionService transactionService){
+
         this.transactionService = transactionService;
         this.accountService = accountService;
     }
@@ -51,7 +55,7 @@ public class AccountController {
                 t.setTransactionType("Debited");
                 t.setCustomerId(a.getCustomerId());
                 t.setTransactionDetail("Amount Debited From COMVIVA ATM RMZ GALLIERIA");
-                t.setTransactionTime(new Date(System.currentTimeMillis()));
+                t.setTransactionTime(new Date(System.currentTimeMillis()).toString());
 
                 transactionService.doTransaction(t);
 
@@ -82,7 +86,7 @@ public class AccountController {
                 t.setTransactionType("Credited");
                 t.setCustomerId(a.getCustomerId());
                 t.setTransactionDetail("Amount Credited From COMVIVA ATM RMZ GALLIERIA");
-                t.setTransactionTime(new Date(System.currentTimeMillis()));
+                t.setTransactionTime(new Date(System.currentTimeMillis()).toString());
 
                 transactionService.doTransaction(t);
 
@@ -94,7 +98,7 @@ public class AccountController {
     }
 
     //fund transfer by customer
-    //takes parameter as fromaccount number, amount, toaccount
+    //takes parameter as fromacount number, amount, toaccount
     @RequestMapping(path = "/customer/account/fundtransfer", method = RequestMethod.POST)
     public @ResponseBody String fundTransfer(@RequestParam("fromaccount") Long fromAccount,
                                              @RequestParam("amount") double amount,
@@ -105,19 +109,37 @@ public class AccountController {
         if(to!=null){
             if(from.getAccountBalance()-amount >0){
 
+                Transaction f = new Transaction();
                 Transaction t = new Transaction();
-                t.setTansactionId("RMZ/COMCUB/OK/"+UUID.randomUUID().toString());
-                t.setAccountNo(from.getAccountNo());
+
+                f.setTansactionId("RMZ/COMCUB/OK/FROM"+UUID.randomUUID().toString());
+                t.setTansactionId("RMZ/COMCUB/OK/TO"+UUID.randomUUID().toString());
+
+                f.setAccountNo(from.getAccountNo());
+                t.setAccountNo(to.getAccountNo());
+
+                f.setTransactionAmount(amount);
                 t.setTransactionAmount(amount);
-                t.setTransactionType("Fund Transfer");
-                t.setCustomerId(from.getCustomerId());
-                t.setTransactionDetail("Fund Transfer" + to.getAccountNo());
-                t.setTransactionTime(new Date(System.currentTimeMillis()));
+
+                f.setTransactionType("Fund Transfer");
+                t.setTransactionType("Fund With Hold");
+
+                f.setCustomerId(from.getCustomerId());
+                t.setCustomerId(to.getCustomerId());
+
+                f.setTransactionDetail("Fund Transfer/" + to.getAccountNo());
+                t.setTransactionDetail("Fund With Hold/"+from.getAccountNo());
+
+                String tym = new Date(System.currentTimeMillis()).toString();
+                f.setTransactionTime(tym);
+                t.setTransactionTime(tym);
+
                 from.setAccountBalance(from.getAccountBalance()-amount);
                 to.setAccountBalance(to.getAccountBalance()+amount);
                 accountService.updateAccount(from);
                 accountService.updateAccount(to);
 
+                transactionService.doTransaction(f);
                 transactionService.doTransaction(t);
 
                 msg = "Successfull Transaction";

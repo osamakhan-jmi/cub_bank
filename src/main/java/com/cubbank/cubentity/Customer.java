@@ -37,7 +37,7 @@ public class Customer {
     private String customerCountry;
     @Column(name="cub_cust_piostal_pin")
     private int customerPostalPin;
-    @Column(name="cub_cust_mpin")
+    @Column(name="cub_cust_tpassword")
     private int customermpin;
 
     public String getCustomerId() {

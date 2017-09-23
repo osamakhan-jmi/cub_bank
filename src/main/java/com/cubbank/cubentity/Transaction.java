@@ -19,7 +19,7 @@ public class Transaction {
     @Column(name = "cub_trans_type")
     private String transactionType;
     @Column(name = "cub_trans_time")
-    private Date transactionTime;
+    private String transactionTime;
     @Column(name="cub_account_no")
     private long accountNo;
     @Column(name="cub_cust_ID")
@@ -71,11 +71,11 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
-    public Date getTransactionTime() {
+    public String getTransactionTime() {
         return transactionTime;
     }
 
-    public void setTransactionTime(Date transactionTime) {
+    public void setTransactionTime(String transactionTime) {
         this.transactionTime = transactionTime;
     }
 }
