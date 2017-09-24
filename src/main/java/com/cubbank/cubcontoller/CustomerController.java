@@ -75,20 +75,20 @@ public class CustomerController {
 
     @RequestMapping(path = "/customer/register", method = RequestMethod.POST)
     public @ResponseBody String registerCustomer(@RequestParam("id") String cstId,
-                            @RequestParam("mobno") Long cstMobNo,
-                            @RequestParam("cstFname") String cstFname,
-                            @RequestParam("cstMname") String cstMname,
-                            @RequestParam("cstLname") String cstLname,
-                            @RequestParam("gender") String cstgndr,
-                            @RequestParam("email") String cstEmail,
-                            @RequestParam("street") String cstStreet,
-                            @RequestParam("city") String cstCity,
-                            @RequestParam("state") String cstState,
-                            @RequestParam("country") String cstCountry,
-                            @RequestParam("pin") int cstpin,
-                            @RequestParam("mpin") int cstMpin,
-                            @RequestParam("pswd") String pswd,
-                            @RequestParam("cpswd") String cpswd) {
+                                                 @RequestParam("mobno") Long cstMobNo,
+                                                 @RequestParam("cstFname") String cstFname,
+                                                 @RequestParam("cstMname") String cstMname,
+                                                 @RequestParam("cstLname") String cstLname,
+                                                 @RequestParam("gender") String cstgndr,
+                                                 @RequestParam("email") String cstEmail,
+                                                 @RequestParam("street") String cstStreet,
+                                                 @RequestParam("city") String cstCity,
+                                                 @RequestParam("state") String cstState,
+                                                 @RequestParam("country") String cstCountry,
+                                                 @RequestParam("pin") int cstpin,
+                                                 @RequestParam("mpin") int cstMpin,
+                                                 @RequestParam("pswd") String pswd,
+                                                 @RequestParam("cpswd") String cpswd) {
 
         String msg = null;
 

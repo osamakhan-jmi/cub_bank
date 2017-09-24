@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="cub_bank@localhost" uuid="d52c5c21-c6c5-4634-bc11-2df3913ad066">
+    <data-source source="LOCAL" name="cubBank@localhost" uuid="f502d7cc-8622-4e96-ae16-41e831434882">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/cub_bank</jdbc-url>
-      <driver-properties>
-        <property name="ApplicationName" value="DataGrip" />
-      </driver-properties>
+      <jdbc-url>jdbc:postgresql://localhost:5432/cubBank</jdbc-url>
     </data-source>
   </component>
 </project>

@@ -28,7 +28,8 @@ public class UserController {
     }
 
     @RequestMapping(path="/login", method = RequestMethod.POST)
-    public @ResponseBody LoginResponse validateUserLogin(@RequestParam("userid") String userid, @RequestParam("password") String pswd){
+    public @ResponseBody LoginResponse validateUserLogin(@RequestParam("userid") String userid,
+                                                         @RequestParam("password") String pswd){
 
         CubUser cubUser = null;
         LoginResponse user = new LoginResponse();

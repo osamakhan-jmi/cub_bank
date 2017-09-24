@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="cub_bank@localhost" uuid="d52c5c21-c6c5-4634-bc11-2df3913ad066">
+    <data-source name="cubBank@localhost" uuid="f502d7cc-8622-4e96-ae16-41e831434882">
       <database-info product="PostgreSQL" version="9.3.19" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4.2 (build 1206)">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>postgres</user-name>
-      <introspection-schemas>cub_bank:@</introspection-schemas>
+      <introspection-schemas>cubBank:*</introspection-schemas>
     </data-source>
   </component>
 </project>
