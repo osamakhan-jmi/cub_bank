@@ -1,0 +1,259 @@
+<!--Author:Ruben Quadros
+Project:Online banking/Comcubs
+Team:MFS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="Interet Banking Responsive web template"/>
+    <meta name="author" content="Ruben" />
+
+    <title>Your Accounts</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+    <link href ="css/home.css" rel="stylesheet" type="text/css">
+	
+	
+  </head>
+
+  <body id="page-top">
+  <div id = "wrapper">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <!--<h2 class="section-heading" align = "left">Your Details</h2>-->
+            <!--<h3 class="section-subheading text-muted">Enter your login info</h3>-->
+          </div>
+        </div>
+        <div class="row text-center">
+
+            <div class = "showAccounts" align = "left" >
+            <!----------NEEDS TO BE DYNAMIC-------------->
+            <div>
+            <!--<p>This needs to be dynamic</p>
+            <p >Account Number:</p>
+            <p >AC1 BALANCE<br/>
+            <input type = "submit" class="btn btn-xl js-scroll-trigger" name = "transactionsInfo" value = "Last n transactions"/>
+            </p>
+            <p>AC2 BALANCE<br/>
+            <input type = "submit" class="btn btn-xl js-scroll-trigger" name = "transactionsInfo" value = "Last n transactions"/>
+            <br/><br/>
+            </p>-->
+			<header>
+				<br/>
+				<h3 align = "left">Your profile</h3>
+				<script src = "js/custprofile.js" ></script>
+			</header>
+			<hr/>
+			
+			<header>
+				<br/>
+				<h3 align = "left">Your Account details</h3>
+				<script src = "js/custaccount.js" ></script>
+			</header>
+			
+				
+        </div>
+		
+		
+		
+		
+		
+		
+		
+		
+        <hr/>
+
+        <!-----------------------CUSTOMER OPTIONS------------------------>
+        
+
+
+		
+		
+		<h2 class="section-heading">Other Options</h2>
+        <div class = "options">
+            
+			<!-----------------------------------------ADD MONEY--------------------------------->
+			<script src = "js/credit.js" ></script>
+			<input type = "submit" onclick ="div_show_credit()" class="btn btn-xl js-scroll-trigger" id = "credit" name="credit_money" value = "Credit" />
+            
+			<div id="abc_credit" style="display: none;">
+ 
+				<!-- Popup div starts here -->
+				<div id="popupContact"> 
+
+					<!-- contact us form -->
+					<form id = "credit_amt" action="#" method="post" >
+			
+						<br/>
+						<input type="text" name="name" id="acNo" placeholder="Account Number" required = ""/>
+						&nbsp; &nbsp;
+						<input type="text" name="name" id="amount" placeholder="Add Money" required=""/>
+						<br/><br/>
+			
+			
+						<input type="submit" id="submit"  onClick = "sendCredit()" class="btn btn-xl js-scroll-trigger" value="Add"/>
+						<br/><br/>
+					</form>
+				</div> 
+		<!-- Popup div ends here -->
+		</div>
+			
+			
+			<!--------------------------------------------TRANSFER FUNDS-------------------------------------->
+			
+			<script src = "js/mpin.js" ></script>
+			<input type = "submit" onclick ="div_show_tpass()" class="btn btn-xl js-scroll-trigger" id = "tpass" name="credit_money" value = "Transfer Funds" />
+			
+			<div id="abc_tpass" style="display: none;">
+ 
+				<!-- Popup div starts here -->
+				<div id="popupContact"> 
+
+					<!-- contact us form -->
+					<form id = "t_pass" action="#" method="post" >
+			
+						<br/>
+						Transaction Password:
+						<br/>
+						<input type="password" name="name" id="tpass" placeholder="Transaction Pass" required = ""/>
+						<input type="submit" id="submit"  onclick = "sendTpass()" class="btn btn-xl js-scroll-trigger" value="Confirm"/>
+						<br/><br/>
+					</form>
+				</div> 
+		<!-- Popup div ends here -->
+		</div>
+            <br/><br/>
+			<!--------------------------------------------DEBIT MONEY---------------------------------->
+			
+			<script src = "js/debit.js" ></script>
+			<input type = "submit" onclick ="div_show_debit()" class="btn btn-xl js-scroll-trigger" id = "debit" name = "debit_money" value = "Debit" />
+            
+			<div id="abc_debit" style="display: none;">
+ 
+				<!-- Popup div starts here -->
+				<div id="popupContact"> 
+
+					<!-- contact us form -->
+					<form id = "debit_amt" action="#" method="post" >
+			
+						<br/>
+						<input type="text" name="name" id="acNo" placeholder="Account Number" required = ""/>
+						&nbsp; &nbsp;
+						<input type="text" name="name" id="amount" placeholder="Add Money" required=""/>
+						<br/><br/>
+			
+			
+						<input type="submit" id="submit" onClick="sendDebit()" class="btn btn-xl js-scroll-trigger" value="Debit"/>
+						<br/><br/>
+					</form>
+				</div> 
+		<!-- Popup div ends here -->
+		</div>
+			
+			<!-------------------------------------------------PRITN STATEMENT------------------------------------------------->
+			<script src = "js/printes.js" ></script>
+			<input type = "submit" onclick ="div_show_printes()" class="btn btn-xl js-scroll-trigger" name = "printES"  value = "Print E-Statement" />
+            
+			<div id="abc_printes" style="display: none;">
+ 
+				<!-- Popup div starts here -->
+				<div id="popupContact"> 
+
+					<!-- contact us form -->
+					<form id = "print_es" action="#" method="post" >
+					<br/>
+					How many transaction details do you want?
+					<br/><br/>
+						<input type="text" name="name" id="trans" placeholder="Last Transactions" required = ""/>
+						&nbsp; &nbsp;
+						<input type="text" name="acc_num" id="acNo" placeholder="Account Number" required=""/>
+						&nbsp; &nbsp;
+						<input type="submit" id="submit" onClick="sendPrintes()" class="btn btn-xl js-scroll-trigger" value="Check"/>
+						<br/><br/>
+						<input type="submit" id="submit" onClick="sendMonthly()" class="btn btn-xl js-scroll-trigger" value="Monthly Statement"/>
+						<br/><br/>
+					</form>
+				</div> 
+				
+		<!-- Popup div ends here -->
+
+		</div>
+		
+			
+			<!-----------------------------------CHANGE ADDRESS----------------------------->
+			<script src = "js/chngAddr.js" ></script>
+			<input type = "submit" onclick ="div_show_addr()" class="btn btn-xl js-scroll-trigger" name = "changeAddress" value = "Change Address" />
+			
+			
+			<div id="abc_addr" style="display: none;">
+ 
+				<!-- Popup div starts here -->
+				<div id="popupContact"> 
+
+					<!-- contact us form -->
+					<form id = "chg_addr" action="#" method="post" >
+			
+						<h2>Change Address</h2><hr/>
+						<input type="text" name="name" id="street" placeholder="Street" required=""/>
+						&nbsp; &nbsp;
+						<input type="text" name="name" id="city" placeholder="City" required=""/>
+						&nbsp; &nbsp;
+						<input type="text" name="email" id="state" placeholder="State" required=""/>
+						&nbsp; &nbsp;
+						<input type="text" name="email" id="country" placeholder="Country" required=""/>
+						&nbsp; &nbsp;
+						<input type="text" name="email" id="pin" placeholder="Pin" required=""/>
+						<br/><br/>
+			
+			
+						<input type="submit" id="submit" onClick="sendAddr()" class="btn btn-xl js-scroll-trigger" value="Send"/>
+						
+					</form>
+				</div> 
+		<!-- Popup div ends here -->
+		</div>
+			
+			
+			
+			
+        </div>
+        </div>
+        
+        </div>
+    </div>
+
+          <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+    </div>
+    </body>
+
+  </html>

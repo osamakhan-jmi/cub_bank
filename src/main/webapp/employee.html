@@ -1,0 +1,130 @@
+<!--Author:Ruben Quadros
+Project:Online banking/Comcubs
+Team:MFS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="Interet Banking Responsive web template"/>
+    <meta name="author" content="Ruben" />
+
+    <title>Your page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+    <link href ="css/home.css" rel="stylesheet" type="text/css">
+	
+	
+
+  </head>
+
+  <body id="page-top">
+
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Welcome back!</h2>
+            <!--<h3 class="section-subheading text-muted">Enter your login info</h3>-->
+          </div>
+        </div>
+        <div>
+            
+			<!---------------------------------------------CHECK ASSESTS----------------------------------->
+			<input type = "submit" class="btn btn-xl js-scroll-trigger" value = "Check Assets" />
+            <br/><br/>
+            <!--------------------------CHANGE CUSTOMER ADDRESS------------------------->
+			<script src = "js/chngAddr.js" ></script>
+			<input type = "submit" onclick ="div_show_addr()" class="btn btn-xl js-scroll-trigger" name = "changeAddress" value = "Change Address" />
+			
+			
+			<div id="abc_addr" style="display: none;">
+ 
+				<!-- Popup div starts here -->
+				<div id="popupContact"> 
+
+					<!-- contact us form -->
+					<form id = "chg_addr" action="#" method="post" >
+			
+						<h2>Change Address</h2><hr/>
+						<input type="text" name="name" id="street" placeholder="Street"/>
+						&nbsp; &nbsp;
+						<input type="text" name="name" id="city" placeholder="City"/>
+						&nbsp; &nbsp;
+						<input type="text" name="email" id="state" placeholder="State"/>
+						&nbsp; &nbsp;
+						<input type="text" name="email" id="country" placeholder="Country"/>
+						&nbsp; &nbsp;
+						<input type="text" name="email" id="pin" placeholder="Pin"/>
+						<br/><br/>
+			
+			
+						<input type="submit" id="submit" onClick="javascript: check_empty_addr()" class="btn btn-xl js-scroll-trigger" value="Send"/>
+						
+					</form>
+				</div> 
+		<!-- Popup div ends here -->
+		</div>
+			
+			<br/><br/>
+			
+            <!------------------------------CHECK TRANSACTIONS---------------------->
+			<script src = "js/chkTr.js" ></script>
+			<input type = "submit" onclick ="div_show_tr()" class="btn btn-xl js-scroll-trigger" value = "Reports" />
+			
+			<div id="abc_tr" style="display: none;">
+ 
+				<!-- Popup div starts here -->
+				<div id="popupContact"> 
+
+					<!-- contact us form -->
+					<form id = "chk_tr" action="#" method="post" >
+						<br/>
+						<input type="radio" name="report" id="country" />Country
+						
+						<input type="radio" name="report" id="state" />State
+						
+						<input type="radio" name="report" id="city" />City
+						<br/><br/>
+						
+						<input type="submit" id="submit" onClick="javascript:check_empty_tr()" class="btn btn-xl js-scroll-trigger" value="Send"/>
+						
+						</form>
+				</div> 
+		<!-- Popup div ends here -->
+		</div>
+			
+        </div>
+        </div>
+
+          <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+  </body>
+
+  </html>

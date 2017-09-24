@@ -1,0 +1,50 @@
+/*HOME PAGE STYLES
+AUTHOR: RUBEN QUADROS
+PROJECT: ONLINE BANKING/COMCUBS
+TEAM: MFS*/
+.formInfo{
+	border-style: groove;
+	border-radius: 8px;
+	padding: 5px;
+}
+
+#services{
+
+	background: url("login-bg.jpg");
+	background-size: 1000px 500px;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.reg{
+	border-style: groove;
+	border-radius: 8px;
+	padding: 3px;
+
+}
+
+.foot{
+	text-align: center;
+	/*clear:left;
+	padding:30px;*/
+	background-color: #d0e1e1;
+}
+
+.ch{
+	font-family: helvetica;
+	color: red;
+}
+
+.register{
+	font-size:110%;
+}
+
+#register{
+	background-color: #e6ffff;
+}
+
+#funds_box{
+	border-style: groove;
+	border-radius: 8px;
+	padding: 5px;
+}

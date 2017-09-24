@@ -1,0 +1,121 @@
+<!--Author:Ruben Quadros
+Project:Online banking/Comcubs
+Team:MFS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="Interet Banking Responsive web template"/>
+    <meta name="author" content="Ruben" />
+
+    <title>Transfer Funds</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+    <link href ="css/home.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body id="page-top">
+   <div id = "wrapper"> 
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" align = "left">Existing Beneficiaries</h2>
+            <br/>
+            <!--<h3 class="section-subheading text-muted">Enter your login info</h3>-->
+          </div>
+        </div>
+            <div class = "container-fluid">
+            <table class = "btabe" border = "3" >
+            <tr>
+                <th>Name</th>
+                <th>Account Number</th>
+                
+            </tr>
+            <tr>
+                <td>Ruben</td>
+                <td>1234</td>
+                
+            </tr>
+            </table>
+            <br/><br/>
+            
+			
+			<!--input type = "submit" onclick ="div_show_tr()" class="btn btn-xl js-scroll-trigger" value = "Check Transcations" />
+			<br/><br/-->
+			
+						
+			<!------------------------------------------ADD BENEFICIARY---------------------------------->
+			<script src = "js/addBen.js" ></script>		
+			<input type = "submit" onclick = "div_show_ben()" class="btn btn-xl js-scroll-trigger" value = "Add Beneficiaries" />
+            
+			<div id="abc_ben" style="display: none;">
+ 
+				<!-- Popup div starts here -->
+				<div id="popupContact"> 
+
+					<!-- contact us form -->
+					<form id = "chk_tr" action="#" method="post" >
+					
+					<br/>
+						<input type="text" name="name" id="benName" placeholder="Beneficiary Name"/>
+						&nbsp; &nbsp;
+						<input type="text" name="acc_num" id="acNum" placeholder="Account Number"/>
+						
+						<br/><br/>
+					
+						<input type="submit" id="submit" onClick="javascript: check_empty_ben()" class="btn btn-xl js-scroll-trigger" value="Add"/>
+			
+			<br/><br/>
+			</form>
+				</div> 
+		<!-- Popup div ends here -->
+		</div>
+            </div>
+  
+            <br/><br/>
+            <h3>Transfer Money</h3>
+			
+			Account Number:&nbsp;
+            <input type = "number" id ="funds_box" name = "ac_no" placeholder = "Account Number" required = "" />
+            &nbsp; &nbsp;
+            Add Amount:&nbsp;
+            <input type = "number" id ="funds_box" min = "0" name = "amt" placeholder = "Amount" required = "" />
+            <br/><br/>
+           <input type = "submit" class="btn btn-xl js-scroll-trigger" value = "Transfer" /> 
+           </div>
+
+   
+          <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+  </div>
+  </body>
+  </html>

@@ -38,7 +38,7 @@ public class Customer {
     @Column(name="cub_cust_piostal_pin")
     private int customerPostalPin;
     @Column(name="cub_cust_tpassword")
-    private int customermpin;
+    private String customermpin;
 
     public String getCustomerId() {
         return customerId;
@@ -136,8 +136,8 @@ public class Customer {
         this.customerPostalPin = customerPostalPin;
     }
 
-    public void setCustomermpin(int customermpin){ this.customermpin = customermpin; }
+    public void setCustomermpin(String customermpin){ this.customermpin = customermpin; }
 
-    public int getCustomermpin(){ return this.customermpin; }
+    public String getCustomermpin(){ return this.customermpin; }
 }
 

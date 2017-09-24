@@ -34,10 +34,10 @@ public class CustomerController {
 
     @RequestMapping(path = "/customer/mpin", method = RequestMethod.POST)
     public @ResponseBody
-    String getMpin(@RequestParam("customerid") String cstid, @RequestParam("tpassword") int pin) {
+    String getMpin(@RequestParam("customerid") String cstid, @RequestParam("tpassword") String pin) {
         Customer cst = customerService.getCustomerById(cstid);
         String msg = null;
-        if (cst.getCustomermpin() == pin) {
+        if (cst.getCustomermpin().equals(pin)) {
             msg = "Coorect";
         } else {
             msg = "Incorrect";
@@ -67,7 +67,7 @@ public class CustomerController {
             cst.setCustomerCountry(country);
         }
         if (pin != 0) {
-            cst.setCustomermpin(pin);
+            cst.setCustomerPostalPin(pin);
         }
         customerService.registerCustomer(cst);
         return "Address Updated";
@@ -86,7 +86,7 @@ public class CustomerController {
                                                  @RequestParam("state") String cstState,
                                                  @RequestParam("country") String cstCountry,
                                                  @RequestParam("pin") int cstpin,
-                                                 @RequestParam("mpin") int cstMpin,
+                                                 @RequestParam("mpin") String cstMpin,
                                                  @RequestParam("pswd") String pswd,
                                                  @RequestParam("cpswd") String cpswd) {
 

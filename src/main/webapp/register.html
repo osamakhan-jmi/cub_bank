@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <title>Register</title>
+	<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="js/registeration.js"></script>
+
+  </head>
+
+  <body>
+    <table border="1" align="center">
+      <tr>
+        <td>Customer id*</td>
+        <td><input type="text" id="id" required></td>
+      </tr>
+
+      <tr>
+        <td>Mobile Number*</td>
+        <td><input type="text" id="mobno" required></td>
+      </tr>
+
+      <tr>
+        <td>First Name*</td>
+        <td><input type="text" id="cstFname" required></td>
+      </tr>
+
+      <tr>
+        <td>Second Name</td>
+        <td><input type="text" id="cstMname"></td>
+      </tr>
+      <tr>
+        <td>Last Name*</td>
+        <td><input type="text" id="cstLname" required></td>
+      </tr>
+
+      <tr>
+        <td>Gender*</td>
+        <td>
+          <select id="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Transgender</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Email*</td>
+        <td><input type="email" id="email" required></td>
+      </tr>
+
+      <tr>
+        <td>Street*</td>
+        <td><input type="text" id="street" required></td>
+      </tr>
+
+      <tr>
+        <td>City*</td>
+        <td><input type="text" id="city" required></td>
+      </tr>
+
+      <tr>
+        <td>State*</td>
+        <td><input type="text" id="state" required></td>
+      </tr>
+
+      <tr>
+        <td>Country*</td>
+        <td><input type="text" id="country" required></td>
+      </tr>
+
+      <tr>
+        <td>Postal Pin*</td>
+        <td><input type="text" id="pin" required></td>
+      </tr>
+
+      <tr>
+        <td>Transaction Password*</td>
+        <td><input type="password" id="mpin" required></td>
+      </tr>
+
+      <tr>
+        <td>Password*</td>
+        <td><input type="password" id="pswd" required></td>
+      </tr>
+
+      <tr>
+        <td>Confirm Password*</td>
+        <td><input type="password" id="cpswd" required></td>
+      </tr>
+
+      <tr>
+        <td align="center" colspan="2"><button onclick="register()">Register</button> </td>
+      </tr>
+
+    </table>
+  </body>
+  </html>
