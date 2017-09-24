@@ -723,7 +723,7 @@
       <workItem from="1506079601724" duration="24384000" />
       <workItem from="1506162640843" duration="11757000" />
       <workItem from="1506176285974" duration="1874000" />
-      <workItem from="1506233982635" duration="822000" />
+      <workItem from="1506233982635" duration="906000" />
     </task>
     <task id="LOCAL-00001" summary="OK 2nd Commit">
       <created>1505797296855</created>
@@ -893,11 +893,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506234411825</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="ok commit">
+      <created>1506234833009</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1506234833009</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142253000" />
+    <option name="totallyTimeSpent" value="142337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1194,7 +1201,7 @@
         <state relative-caret-position="17">
           <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
